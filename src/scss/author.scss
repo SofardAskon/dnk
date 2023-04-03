@@ -1,0 +1,319 @@
+//====================================================================================================
+
+.author {
+
+    position: relative;
+
+    // .author__bg
+
+    &__bg {
+        position: absolute;
+        top: -40%;
+        left: 0;
+        width: 100%;
+        height: 140%;
+        object-fit: cover;
+        z-index: 0;
+
+        @media (max-width: $tablet) {
+            top: -60%;
+            height: 160%;
+        }
+    }
+
+    // .author__container
+
+    &__container {
+        position: relative;
+        z-index: 1;
+        padding-top: rem(272);
+
+        @media (max-width: $tablet) {
+            padding-top: rem(40);
+        }
+    }
+
+    // .author__wrapper
+
+    &__wrapper {
+        display: flex;
+        margin-bottom: rem(200);
+    }
+
+    // .author__first
+
+    &__first {
+        width: 50%;
+
+        @media (max-width: $tablet) {
+            width: 100%;
+        }
+    }
+
+    // .author__list
+
+    &__list {
+        margin-bottom: rem(33);
+        padding-left: rem(30);
+
+        li {
+            font-style: normal;
+            font-weight: 400;
+            font-size: rem(22);
+            line-height: 150%;
+            color: rgba(255, 255, 255, 0.8);
+            position: relative;
+            display: flex;
+
+            &:before {
+                content: '';
+                background-image: url(@img/radar.svg);
+                width: rem(25);
+                height: rem(25);
+                background-size: cover;
+                position: absolute;
+                left: rem(-45);
+                top: 50%;
+                transform: translate(50%, -50%);
+
+                @media (max-width: $tablet) {
+                    width: rem(15);
+                    height: rem(15);
+                    left: rem(-35);
+                    
+                }
+            }
+
+            @media (max-width: $tablet) {
+                font-size: rem(18);
+                line-height: rem(25);
+            }
+        }
+
+        @media (max-width: $tablet) {
+            margin-bottom: rem(20);
+        }
+    }
+
+    // .author__description
+
+    &__description {
+        font-style: normal;
+        font-weight: 400;
+        font-size: rem(24);
+        line-height: 150%;
+        color: rgba(255, 255, 255, 0.8);
+        margin-bottom: rem(33);
+        
+        span {
+            color: #359F64;
+        }
+
+        @media (max-width: $tablet) {
+            font-size: rem(19);
+            margin-bottom: rem(30);
+        }
+    }
+
+    // .author__infoblock
+
+    &__infoblock {
+        display: flex;
+        flex-direction: column;
+        row-gap: rem(40);
+    }
+
+    // .author__infoblock-item
+
+    &__infoblock-item {
+        font-style: normal;
+        font-weight: 400;
+        font-size: rem(22);
+        line-height: 150%;
+        color: rgba(255, 255, 255, 0.8);
+        padding: rem(30);
+        border: 1px solid rgba(71, 197, 76, 0.41);
+        border-radius: rem(30);
+        max-width: rem(641);
+
+        @media (max-width: $tablet) {
+            font-size: rem(18);
+        }
+    }
+
+    // .author__second
+
+    &__second {
+        position: absolute;
+        right: 0;
+        top: 0;
+
+        @media (max-width: $tablet) {
+            position: relative;
+            right: unset;
+            top: unset;
+            z-index: 1;
+            display: flex;
+            justify-content: end;
+        }
+    }
+
+    // .author__author-photo
+
+    &__author-photo {
+        max-width: rem(706);
+        position: absolute;
+        right: 0;
+
+        @media (max-width: $tablet) {
+            position: unset;
+            max-width: rem(333)
+        }
+
+        
+    }
+
+    // .author__name
+
+    &__name {
+        font-family: 'Impact';
+        font-style: normal;
+        font-weight: 400;
+        font-size: rem(74);
+        line-height: rem(90);
+        color: #FFFFFF;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: rem(440);
+        bottom: rem(-1020);
+        right: rem(110);
+
+        span {
+            position: relative;
+            z-index: 1;
+            left: rem(20);
+        }
+
+
+        &::before {
+            content: url(@img/puh.svg);
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            right: rem(570);
+            bottom: rem(-350);
+
+            @media (max-width: $tablet) {
+                right: rem(200);
+                bottom: rem(-300);
+                z-index: 0;
+            }
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: rem(639);
+            height: rem(160);
+            left: rem(-80);
+            background: #427744;
+            opacity: 0.5;
+            filter: blur(105px);
+            z-index: 1;
+
+            @media (max-width: $mobile) {
+                top: rem(-70);
+                width: rem(300);
+            }
+        }
+
+        @media (max-width: $tablet) {
+            bottom: 0;
+            left: 0;
+            font-size: rem(40);
+        }
+    }
+
+    // .author__experience
+
+    &__experience {
+        display: flex;
+        column-gap: rem(81);
+        align-items: center;
+
+        @media (max-width: $tablet) {
+            flex-direction: column;
+        }
+    }
+
+    // .author__experience-first
+
+    &__experience-first {
+        width: 100%;
+        img {
+            width: 100%;
+        }
+
+        @media (max-width: $tablet) {
+            margin-bottom: rem(60);
+        }
+    }
+
+    // .author__experience-second
+
+    &__experience-second {
+        @media (max-width: $tablet) {
+            width: 100%;
+        }
+    }
+
+    // .author__experience-item
+
+    &__experience-item {
+        margin-bottom: rem(30);
+
+        @media (max-width: $tablet) {
+            margin-bottom: rem(20);
+        }
+    }
+
+    // .author__experience-title
+
+    &__experience-title {
+        font-family: 'Impact';
+        font-style: normal;
+        font-weight: 400;
+        font-size: rem(32);
+        line-height: 150%;
+        text-transform: uppercase;
+        color: #fff;
+        margin-bottom: rem(10);
+
+        span {
+            color: #359F64;
+        }
+
+        @media (max-width: $tablet) {
+            font-size: rem(24);
+        }
+    }
+
+    // .author__experience-subtitle
+
+    &__experience-subtitle {
+        font-style: normal;
+        font-weight: 400;
+        font-size: rem(22);
+        line-height: 150%;
+        color: rgba(255, 255, 255, 0.8);
+
+        @media (max-width: $tablet) {
+            font-size: rem(18);
+        }
+    }
+}
+
+
+//====================================================================================================

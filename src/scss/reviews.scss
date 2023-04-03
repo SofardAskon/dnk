@@ -1,0 +1,215 @@
+//====================================================================================================
+
+.reviews {
+    position: relative;
+    padding: rem(40) 0;
+    // .reviews__bg
+
+    &__bg {
+        width: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: -50%;
+        height: 150%;
+    }
+    
+    // .reviews__container
+
+    &__container {
+        position: relative;
+        z-index: 1;
+    }
+
+    // .reviews__top-mobile
+
+    &__top-mobile {
+        display: none;
+        @media (max-width: $tablet) {
+            display: block;
+            margin-bottom: rem(45);
+        }
+    }
+
+    // .reviews__title
+
+    &__title {
+        font-style: normal;
+        font-weight: 400;
+        font-size: rem(100);
+        line-height: rem(120);
+        text-transform: uppercase;
+        color: #FFFFFF;
+        transform: rotate(90deg);
+        position: relative;
+        white-space: nowrap;
+
+        @media (max-width: $tablet) {
+            white-space: inherit;
+            transform: unset;
+            font-size: rem(68);
+            line-height: rem(73);
+        }
+    }
+
+    // .reviews__subtitle
+
+    &__subtitle {
+        font-style: normal;
+        font-weight: 800;
+        font-size: rem(20);
+        line-height: 150%;
+        text-transform: uppercase;
+        background: linear-gradient(180deg, #47C54C 0%, rgba(71, 197, 76, 0.929167) 54.48%, #359F64 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+        margin-bottom: rem(60);
+        text-align: end;
+
+        @media (max-width: $tablet) {
+            text-align: center;
+            margin-bottom: rem(0);
+        }
+    }
+
+    // .reviews__wrapper
+
+    &__wrapper {
+        display: flex;
+        column-gap: rem(26);
+        justify-content: center;
+
+        @media (max-width: $tablet) {
+            flex-direction: column;
+        }
+    }
+
+    // .reviews__first
+
+    &__first {
+    }
+
+    // .reviews__first-top
+
+    &__first-top {
+        @media (max-widtH: $tablet) {
+            display: none;
+        }
+    }
+
+    // .reviews__item
+
+    &__item {
+        margin-bottom: rem(150);
+
+        @media (max-width: $tablet) {
+            margin-bottom: rem(60);
+        }
+    }
+
+    // .reviews__item-instragram
+
+    &__item-instragram {
+        margin-bottom: rem(20);
+        display: block;
+    }
+
+    // .reviews__item-video
+
+    &__item-video {
+        cursor: pointer;
+        width: rem(493);
+        height: rem(277);
+        background-color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: rem(40);
+        background-size: cover;
+
+        @media (max-width: rem(1200)) {
+            width: rem(400);
+            height: rem(200);
+        }
+
+        @media (max-width: $tablet) {
+            width: 100%;
+            height: rem(277);
+        }
+    }
+
+    // .reviews__item-play
+
+    &__item-play {
+    }
+
+    // .reviews__item-bottom
+
+    &__item-bottom {
+        display: flex;
+        justify-content: space-between;
+        p {
+            font-style: normal;
+            font-weight: 800;
+            font-size: rem(20);
+            line-height: 150%;
+            text-transform: uppercase;
+            color: #FFFFFF;
+        }
+
+        @media (max-width: $tablet) {
+            flex-direction: column;
+            justify-content: unset;
+            row-gap: rem(20);
+        }
+    }
+
+    // .reviews__second
+
+    &__second {
+        width: rem(122);
+
+        @media (max-width: $tablet) {
+            display: none;
+        }
+    }
+
+    // .reviews__third
+
+    &__third {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .reviews__item {
+            margin-bottom: rem(0);
+
+            @media (max-width: $tablet) {
+                width: 100%;
+                margin-bottom: rem(35);
+            }
+        }
+    }
+
+    // .reviews__button
+
+    &__button {
+        text-align: end;
+        @media (max-width: $tablet) {
+            text-align: center;
+        }
+    }
+
+    // .reviews__button-url
+
+    &__button-url {
+        font-size: rem(28);
+
+        @media (max-width: $tablet) {
+            font-size: rem(22);
+        }
+    }
+}
+
+//====================================================================================================

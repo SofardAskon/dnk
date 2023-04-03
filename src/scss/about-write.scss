@@ -1,0 +1,107 @@
+//====================================================================================================
+
+.about-write {
+
+    // background-image: url(@img/about-write-bg.png);
+    // background-size: cover;
+    // background-repeat: no-repeat;
+    // background-color: #000;
+    // .about-write__container
+    position: relative;
+
+    &__container {
+        display: flex;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+
+        @media (max-width: $tablet) {
+            flex-direction: column;
+            align-items: start;
+        }
+    }
+
+    // .about-write__bg
+
+    &__bg {
+        position: absolute;
+        top: -37vw;
+        left: 0;
+        z-index: 1;
+        width: 100%;
+
+        @media (max-width: $tablet) {
+            top: -33vw;
+        }
+
+        @media (max-width: $mobile) {
+            height: rem(380);
+            top: rem(-230);
+        }
+    }
+
+    // .about-write__circle
+
+    &__circle {
+        position: absolute;
+        top: rem(-100);
+        left: rem(20);
+        z-index: 1;
+        max-width: rem(373);
+    }
+
+    // .about-write__title
+
+    &__title {
+        font-style: normal;
+        font-weight: 400;
+        font-size: rem(20);
+        line-height: rem(27);
+        color: rgba(255, 255, 255, 0.7);
+        border-bottom: rem(2) solid #47C54C;
+        margin-right: rem(135);
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: rem(273);
+            height: rem(246);
+            left: rem(-150);
+            top: rem(20);
+            background: #427744;
+            opacity: 0.7;
+            filter: blur(105px);
+            z-index: -1;
+
+            @media (max-width: $mobile) {
+                top: rem(-70);
+                width: rem(300);
+            }
+        }
+
+        @media (max-width: $mobile) {
+            font-size: rem(14);
+        }
+    }
+
+    // .about-write__list
+
+    &__list {
+        display: flex;
+        align-items: center;
+        column-gap: 20%;
+    }
+
+    // .about-write__item
+
+    &__item {
+        img {
+            @media (max-width: $mobile) {
+                max-width: rem(91);
+            }
+        }
+    }
+}
+
+
+//====================================================================================================

@@ -1,0 +1,93 @@
+//====================================================================================================
+
+.ceremony {
+
+    padding: rem(100) 0;
+
+    @media (max-width: $mobile) {
+        padding: rem(80) 0;
+    }
+    // .ceremony__container
+
+    &__container {
+        position: relative;
+        z-index: 2;
+    }
+
+    // .ceremony__title
+
+    &__title {
+        margin-bottom: rem(30);
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: rem(639);
+            height: rem(237);
+            left: rem(-80);
+            background: #427744;
+            opacity: 0.5;
+            filter: blur(105px);
+            z-index: -1;
+
+            @media (max-width: $mobile) {
+                top: rem(-70);
+                width: rem(300);
+            }
+        }
+    }
+
+    // .ceremony__slider
+
+    &__slider {
+        overflow: visible !important;
+        margin-bottom: rem(80);
+
+        @media (max-width: $mobile) {
+            margin-bottom: rem(60);
+        }
+    }
+
+    // .ceremony__wrapper
+
+    &__wrapper {
+    }
+
+    // .ceremony__slide
+
+    &__slide {
+        height: rem(277);
+        img {
+            width: 100%;
+            object-fit: cover;
+            height: 100%;
+        }
+
+        @media (max-width: $mobile) {
+            height: rem(209);
+        }
+    }
+
+    // .ceremony__social
+
+    &__social {
+        display: flex;
+        column-gap: rem(30);
+
+        @media (max-widtH: $mobile) {
+            justify-content: center;
+        }
+    }
+
+    // .ceremony__social-item
+
+    &__social-item {
+        img {
+            max-height: rem(40);
+            width: 100%;
+        }
+    }
+}
+
+//====================================================================================================

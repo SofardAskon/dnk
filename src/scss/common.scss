@@ -1,0 +1,61 @@
+// Заголовки, загальні БЕМ блоки та інше...
+
+:root {
+    --color-main: #359F64;
+}
+
+.button {
+    background: #2EDC1F;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: rem(58);
+    margin: 0 auto;
+    font-size: 2.083vw;
+    font-weight: 900;
+    text-transform: uppercase;
+    cursor: pointer;
+    padding: 0 rem(30);
+    transition: .5s ease-out;
+    border: none;
+    color: #fff;
+    position: relative;
+    background: linear-gradient(to left, #ffffff00 39%, var(--color-main) 0%) right;
+    background-size: 200%;
+    font-style: normal;
+    font-weight: 600;
+    font-size: rem(18);
+    line-height: 25px;
+    text-transform: uppercase;
+
+    &:hover {
+        background-position: left;
+    }
+
+    @media (max-width: $mobile) {
+        height: rem(46);
+        font-size: rem(14);
+        padding: 0 rem(20);
+    }
+
+}
+
+
+.title {
+    font-family: 'Impact';
+    font-style: normal;
+    font-weight: 400;
+    font-size: rem(100);
+    line-height: rem(122);
+    text-transform: uppercase;
+    color: #FFFFFF;
+
+    @media (max-width: $mobile) {
+        font-size: rem(40);
+        line-height: rem(49);
+    }
+}
+
+.iti {
+    width: 100%;
+}

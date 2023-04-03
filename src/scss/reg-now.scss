@@ -1,0 +1,114 @@
+//====================================================================================================
+
+.reg-now {
+
+    background-color: #000;
+    position: relative;
+    padding-bottom: rem(50);
+
+    // .reg-now__bg
+
+    &__bg {
+        position: absolute;
+        z-index: 1;
+        top: rem(-160);
+        left: rem(-240);
+    }
+
+    // .reg-now__container
+
+    &__container {
+        position: relative;
+        z-index: 1;
+    }
+
+    // .reg-now__title
+
+    &__title {
+        font-size: rem(60);
+        margin-bottom: rem(57);
+
+        @media (max-width: $tablet) {
+            font-size: rem(40);
+            line-height: rem(49);
+            margin-bottom: rem(52);
+        }
+    }
+
+    // .reg-now__list
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        column-gap: rem(40);
+        margin-bottom: rem(66);
+
+        @media (max-width: $tablet) {
+            flex-direction: column;
+            row-gap: rem(20);
+            column-gap: unset;
+            margin-bottom: rem(50);
+        }
+    }
+
+    // .reg-now__item
+
+    &__item {
+        border: 1px solid rgba(71, 197, 76, 0.41);
+        border-radius: rem(30);
+        display: flex;
+        align-items: center;
+        column-gap: rem(30);
+        padding: rem(30);
+        height: rem(112);
+
+        @media (max-width: $tablet) {
+            height: unset;
+        }
+    }
+
+    // .reg-now__item-title
+
+    &__item-title {
+        font-style: normal;
+        font-weight: 400;
+        font-size: rem(22);
+        line-height: 150%;
+        color: #FFFFFF;
+
+        @media (max-width: $tablet) {
+            font-size: rem(20);
+        }
+    }
+
+    // .reg-now__radion
+
+    &__radion {
+        img {
+            max-width: rem(82);
+        }
+    }
+
+    // .reg-now__button
+
+    &__button {
+        width: 50%;
+        margin-left: auto;
+
+        @media (max-width: $tablet) {
+            width: 100%;
+            text-align: center;
+            margin-left: unset;
+        }
+    }
+
+    // .reg-now__button-url
+
+    &__button-url {
+        @media (max-width: $tablet) {
+            font-size: rem(22);
+        }
+    }
+}
+
+//====================================================================================================

@@ -1,0 +1,45 @@
+<div id="popup" aria-hidden="true" class="popup">
+	<div class="popup__wrapper">
+		<div class="popup__content">
+			<button data-close type="button" class="popup__close"><svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<g opacity="0.7">
+				<path fill-rule="evenodd" clip-rule="evenodd" d="M30.546 0.453984C31.1513 1.0593 31.1513 2.0407 30.546 2.64602L2.64602 30.546C2.0407 31.1513 1.0593 31.1513 0.453984 30.546C-0.151328 29.9407 -0.151328 28.9593 0.453984 28.354L28.354 0.453984C28.9593 -0.151328 29.9407 -0.151328 30.546 0.453984Z" fill="white"/>
+				<path fill-rule="evenodd" clip-rule="evenodd" d="M0.453984 0.453984C1.0593 -0.151328 2.0407 -0.151328 2.64602 0.453984L30.546 28.354C31.1513 28.9593 31.1513 29.9407 30.546 30.546C29.9407 31.1513 28.9593 31.1513 28.354 30.546L0.453984 2.64602C-0.151328 2.0407 -0.151328 1.0593 0.453984 0.453984Z" fill="white"/>
+				</g>
+				</svg>
+				</button>
+			<div class="popup__text">
+				<div class="popup__title">ОСТАВИТЬ ЗАЯВКУ</div>
+				<form data-ajax data-popup-message="#form-success" action="https://kruchin.space/send.php" method="POST" class="popup__form">
+					<input type="hidden" id="packageName" name="package" value="">
+					<div class="popup__form-input-group">
+						<input type="text" name="name" class="popup__form-input-input" placeholder="Юрий Кручин" required>
+					</div>
+					<div class="popup__form-input-group">
+						<input type="text" name="phone" id="phone" class="popup__form-input-input" required>
+					</div>
+					<div class="popup__form-input-group popup__form-input-group-button">
+						<button class="button" type="submit">ЗАБРОНИРОВАТЬ</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="form-success" aria-hidden="true" class="popup">
+	<div class="popup__wrapper">
+		<div class="popup__content">
+			<button data-close type="button" class="popup__close"><svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<g opacity="0.7">
+				<path fill-rule="evenodd" clip-rule="evenodd" d="M30.546 0.453984C31.1513 1.0593 31.1513 2.0407 30.546 2.64602L2.64602 30.546C2.0407 31.1513 1.0593 31.1513 0.453984 30.546C-0.151328 29.9407 -0.151328 28.9593 0.453984 28.354L28.354 0.453984C28.9593 -0.151328 29.9407 -0.151328 30.546 0.453984Z" fill="white"/>
+				<path fill-rule="evenodd" clip-rule="evenodd" d="M0.453984 0.453984C1.0593 -0.151328 2.0407 -0.151328 2.64602 0.453984L30.546 28.354C31.1513 28.9593 31.1513 29.9407 30.546 30.546C29.9407 31.1513 28.9593 31.1513 28.354 30.546L0.453984 2.64602C-0.151328 2.0407 -0.151328 1.0593 0.453984 0.453984Z" fill="white"/>
+				</g>
+				</svg>
+				</button>
+			<div class="popup__text">
+				<div class="popup__title">Спасибо!</div>
+				<div class="" style="height: 50px; width: 50px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path fill="#2EDC1F" d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/></svg></div>
+			</div>
+		</div>
+	</div>
+</div>
