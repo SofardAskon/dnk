@@ -154,3 +154,24 @@ elements.forEach((element) => {
 //       videoContainer.appendChild(iframe);
 //     });
 //   }
+
+document.addEventListener("watcherCallback", function (e) {
+	// Повна інформація від спостерігача
+	const entry = e.detail.entry;
+	// Спостерігаємий об'єкт
+	const targetElement = entry.target;
+
+  if(targetElement.classList.contains('whom')) {
+      console.log(1);
+
+      window.addEventListener("scroll", function() {
+        let box = document.querySelector(".modern__image-img");
+        let scrollPos = window.scrollY;
+        let scaleValue = .2 + (scrollPos / 1500); // изменить значение 500 на нужное
+        box.style.transform = "scale(" + scaleValue + ")";
+      });
+    
+  }
+});
+
+

@@ -153,6 +153,10 @@
 	&__title-item {
 		display: flex;
 		align-items: center;
+
+		&:first-child .header__title {
+			animation: color_change 2.2s linear forwards;
+		}
 	}
 
 	// .header__title
@@ -164,7 +168,23 @@
 		font-size: rem(120);
 		line-height: rem(146);
 		text-transform: uppercase;
-		color: #FFFFFF;
+
+
+
+		background: linear-gradient( to right, var(--color-main), var(--color-main) 50%, #fff 50% );
+		background-clip: text;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 200% 100%;
+		background-position: 100%;
+		transition: background-position var(3s) ease;
+		text-decoration: none;
+		display: inline-block;
+		text-transform: uppercase;
+		letter-spacing: -0.033em;
+
+		
+		
 
 		&:last-child {
 			margin-left: rem(185);
@@ -184,6 +204,10 @@
 			font-size: rem(50);
 			line-height: rem(61);
 		}
+	}
+
+	@keyframes color_change {
+		100% { background-position: 0 100%; } /* конечная точка */
 	}
 
 	// .header__title-desc
