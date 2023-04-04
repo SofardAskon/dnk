@@ -109,6 +109,10 @@ elements.forEach((element) => {
 });
 
 
+
+
+
+
 // if(document.querySelector('#reviews-1')) {
 //     const videoContainer = document.querySelector('#reviews-1');
 //     const videoThumbnail = document.querySelector('#reviews-1');
@@ -164,12 +168,12 @@ document.addEventListener("watcherCallback", function (e) {
   if(targetElement.classList.contains('whom')) {
       console.log(1);
 
-      window.addEventListener("scroll", function() {
-        let box = document.querySelector(".modern__image-img");
-        let scrollPos = window.scrollY;
-        let scaleValue = .2 + (scrollPos / 1500); // изменить значение 500 на нужное
-        box.style.transform = "scale(" + scaleValue + ")";
-      });
+      // window.addEventListener("scroll", function() {
+      //   let box = document.querySelector(".modern__image-img");
+      //   let scrollPos = window.scrollY;
+      //   let scaleValue = .2 + (scrollPos / 1500); // изменить значение 500 на нужное
+      //   box.style.transform = "scale(" + scaleValue + ")";
+      // });
     
   }
 });
