@@ -2,6 +2,18 @@
 import { isMobile } from "./functions.js";
 // Підключення списку активних модулів
 import { flsModules } from "./modules.js";
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+// ..
+AOS.init({
+  offset: 120,
+  delay: 200,
+  duration: 600,
+  easing: 'ease-out',
+  once: true
+});
+
+
 
 
 const videoItems = document.querySelectorAll('.reviews__item-video');
@@ -112,7 +124,6 @@ elements.forEach((element) => {
 
 
 
-
 // if(document.querySelector('#reviews-1')) {
 //     const videoContainer = document.querySelector('#reviews-1');
 //     const videoThumbnail = document.querySelector('#reviews-1');
@@ -159,23 +170,28 @@ elements.forEach((element) => {
 //     });
 //   }
 
-document.addEventListener("watcherCallback", function (e) {
-	// Повна інформація від спостерігача
-	const entry = e.detail.entry;
-	// Спостерігаємий об'єкт
-	const targetElement = entry.target;
+// document.addEventListener("watcherCallback", function (e) {
+//   // Повна інформація від спостерігача
+//   const entry = e.detail.entry;
+//   // Спостерігаємий об'єкт
+//   const targetElement = entry.target;
 
-  if(targetElement.classList.contains('whom')) {
-      console.log(1);
-
-      // window.addEventListener("scroll", function() {
-      //   let box = document.querySelector(".modern__image-img");
-      //   let scrollPos = window.scrollY;
-      //   let scaleValue = .2 + (scrollPos / 1500); // изменить значение 500 на нужное
-      //   box.style.transform = "scale(" + scaleValue + ")";
-      // });
+//   if(targetElement.classList.contains('whom')) {
+//     console.log(1);
     
-  }
-});
+//     // window.addEventListener("scroll", function() {
+//     //   let box = document.querySelector(".modern__image-img");
+//     //   let scrollPos = window.scrollY;
+//     //   let scaleValue = .2 + (scrollPos / 1500); // изменить значение 500 на нужное
+//     //   box.style.transform = "scale(" + scaleValue + ")";
+//     // });
+
+//   }
+
+//   if(targetElement.classList.contains('format')) {
+
+//   }
+
+// });
 
 

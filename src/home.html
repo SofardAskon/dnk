@@ -57,6 +57,48 @@
 						}
 						document.querySelector('.modern__image-img').style.transform = 'scale('+scale+')';
 					});
+		
+			var scane_scircles = new ScrollMagic.Scene({triggerElement: ".format", duration: '100%', offset: 200})
+					.addTo(controller)
+					.addIndicators() // add indicators (requires plugin)
+					.on("enter", function (e) {
+						const format_items_right = document.querySelectorAll('.format__item-circle-right');
+						format_items_right.forEach(item => {
+							item.classList.add('-circle-revers-right');
+						});
+						
+						const format_items_left = document.querySelectorAll('.format__item-circle-left');
+						format_items_left.forEach(item => {
+							item.classList.add('-circle-revers-left');
+						});
+					})
+					.on("leave", function (e) {
+						const format_items_right = document.querySelectorAll('.format__item-circle-right');
+						format_items_right.forEach(item => {
+							item.classList.remove('-circle-revers-right');
+						});
+						
+						const format_items_left = document.querySelectorAll('.format__item-circle-left');
+						format_items_left.forEach(item => {
+							item.classList.remove('-circle-revers-left');
+						});
+
+					});
+			
+			var scane_scircles = new ScrollMagic.Scene({triggerElement: ".activation", duration: '100%', offset: 200})
+					.addTo(controller)
+					.addIndicators() // add indicators (requires plugin)
+					.on("progress", function (e) {
+						
+							// Получить идентификатор элемента <path> и длину <path>
+							var myline = document.getElementById("activation__line--1");
+							var length = myline.getTotalLength();
+							myline.style.strokeDasharray = length;
+							myline.style.strokeDashoffset = length;
+							var draw = length * e.progress.toFixed(3);
+							myline.style.strokeDashoffset = length - draw;
+
+					});
 
 		</script>
 		
@@ -92,6 +134,26 @@
 		});
 		
 		
+	
+		</script>
+
+		<style>
+			#circle {
+  fill: #359F64;
+}
+
+
+.st0 {
+
+  stroke: #359F64;
+}
+
+.mask-style {
+
+}
+		</style>
+
+		<script>
 	
 		</script>
 	</body>
