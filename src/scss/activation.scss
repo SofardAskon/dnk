@@ -1,7 +1,6 @@
 //====================================================================================================
 
 .activation {
-
     position: relative;
     background-color: #000;
     padding-bottom: rem(50);
@@ -50,16 +49,16 @@
         font-weight: 400;
         font-size: rem(16);
         line-height: 150%;
-        color: #FFFFFF;
+        color: #ffffff;
         max-width: rem(360);
         position: relative;
 
         span {
-            color: #359F64;
+            color: #359f64;
         }
 
         &::before {
-            content: url('@img/radar.svg');
+            content: url("@img/radar.svg");
             position: absolute;
 
             @media (max-width: $tablet) {
@@ -95,6 +94,8 @@
     &__item--2 {
         margin-top: rem(-110);
         margin-left: rem(610);
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
 
         &::before {
             bottom: 0;
@@ -106,7 +107,6 @@
                 left: rem(10);
             }
         }
-        
 
         @media (max-width: $tablet) {
             margin-top: rem(50);
@@ -120,6 +120,8 @@
     &__item--3 {
         margin-left: rem(180);
         margin-top: rem(-180);
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
 
         &::before {
             right: rem(100);
@@ -143,6 +145,8 @@
 
     &__item--4 {
         margin-left: rem(-50);
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
         &::before {
             right: rem(-20);
             top: 0;
@@ -158,12 +162,14 @@
             height: rem(275);
         }
     }
-    
+
     // .activation__item--5
 
     &__item--5 {
         margin-left: rem(540);
         margin-top: rem(-30);
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
         &::before {
             left: rem(-50);
             top: rem(-50);

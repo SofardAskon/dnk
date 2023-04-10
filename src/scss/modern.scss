@@ -1,8 +1,11 @@
 //====================================================================================================
 
 .modern {
-
     position: relative;
+    height: calc(150vh);
+    width: 100%;
+    top: 0;
+    left: 0;
 
     @media (max-width: $mobile) {
         padding-bottom: rem(130);
@@ -11,6 +14,16 @@
     // .modern__container
 
     &__container {
+        height: 100%;
+        max-width: 100%;
+    }
+
+    // .modern__wrapper
+
+    &__wrapper {
+        position: sticky;
+        top: 0;
+        width: 100%;
     }
 
     // .modern__bg
@@ -19,7 +32,7 @@
         position: absolute;
         top: -25%;
         left: 0;
-        width: 100%;
+        width: 101%;
         height: 150%;
         z-index: -1;
         @media (max-width: $tablet) {
@@ -44,15 +57,17 @@
             width: 100%;
             max-width: rem(784);
             object-fit: cover;
-            transform: scale(.1);
+            transform: scale(0.1);
 
             @media (max-width: $mobile) {
-                transform: scale(1.5);
+                // transform: scale(1.5);
                 margin-left: rem(50);
             }
         }
+        @media (max-width: $mobile) {
+            height: 100%;
+        }
     }
 }
-
 
 //====================================================================================================
